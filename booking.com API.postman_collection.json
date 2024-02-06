@@ -1,0 +1,1101 @@
+{
+	"info": {
+		"_postman_id": "a7fb0f2e-4074-4bca-82cf-61f6a85eaff5",
+		"name": "booking.com API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30971973",
+		"_collection_link": "https://universal-desert-496623.postman.co/workspace/Booking-com~6d278f1e-1947-4349-8f40-8496adac7c5c/collection/30971973-a7fb0f2e-4074-4bca-82cf-61f6a85eaff5?action=share&source=collection_link&creator=30971973"
+	},
+	"item": [
+		{
+			"name": "SAVED LIST",
+			"item": [
+				{
+					"name": "Add to Saved List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": {\r\n        \"customerId\": 1\r\n    },\r\n    \"hotel\": {\r\n        \"hotelId\": 4\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/saved-list/add"
+					},
+					"response": [
+						{
+							"name": "Saved List Added",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer\": {\r\n        \"customerId\": 1\r\n    },\r\n    \"hotel\": {\r\n        \"hotelId\": 4\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/saved-list/add"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:25:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"savedListId\": 42,\n    \"customer\": {\n        \"customerId\": 1,\n        \"firstName\": null,\n        \"lastName\": null,\n        \"customerPhoto\": null,\n        \"role\": null,\n        \"customerEmail\": null,\n        \"customerPhone\": null,\n        \"customerDob\": null,\n        \"customerPassword\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    \"hotel\": {\n        \"hotelId\": 4,\n        \"hotelName\": null,\n        \"hotelAddress\": null,\n        \"hotelCity\": null,\n        \"hotelRooms\": 0,\n        \"hotelPrice\": 0,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    }\n}"
+						},
+						{
+							"name": "Hotel Already Added",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer\": {\r\n        \"customerId\": 1\r\n    },\r\n    \"hotel\": {\r\n        \"hotelId\": 4\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/saved-list/add"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:26:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "Hotel already added to saved list"
+						}
+					]
+				},
+				{
+					"name": "Get from Saved List",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get Saved List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/saved-list/get/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:26:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"savedListId\": 41,\n        \"customer\": {\n            \"customerId\": 1,\n            \"firstName\": \"Ariah\",\n            \"lastName\": \"William\",\n            \"customerPhoto\": \"https://www.random-name-generator.com/images/faces/female-white/30.jpg?ezimgfmt=rs:149x143/rscb1/ng:webp/ngcb1\",\n            \"role\": \"user\",\n            \"customerEmail\": \"ariah@hotmail.com\",\n            \"customerPhone\": \"9740258381\",\n            \"customerDob\": \"1994-05-11\",\n            \"customerPassword\": \"$2a$10$h58YAJcVkdlrUCbBoYHhEe8Wj6tUIFjvAwMLIrt0v5M4wSEMvjMjC\",\n            \"savedList\": null,\n            \"bookings\": null\n        },\n        \"hotel\": {\n            \"hotelId\": 1,\n            \"hotelName\": \"Aparthotel Stare Miasto\",\n            \"hotelAddress\": \"Old Town, Poland\",\n            \"hotelCity\": \"Krakow\",\n            \"hotelRooms\": 0,\n            \"hotelPrice\": 8300,\n            \"images\": null,\n            \"savedList\": null,\n            \"bookings\": null\n        }\n    },\n    {\n        \"savedListId\": 42,\n        \"customer\": {\n            \"customerId\": 1,\n            \"firstName\": \"Ariah\",\n            \"lastName\": \"William\",\n            \"customerPhoto\": \"https://www.random-name-generator.com/images/faces/female-white/30.jpg?ezimgfmt=rs:149x143/rscb1/ng:webp/ngcb1\",\n            \"role\": \"user\",\n            \"customerEmail\": \"ariah@hotmail.com\",\n            \"customerPhone\": \"9740258381\",\n            \"customerDob\": \"1994-05-11\",\n            \"customerPassword\": \"$2a$10$h58YAJcVkdlrUCbBoYHhEe8Wj6tUIFjvAwMLIrt0v5M4wSEMvjMjC\",\n            \"savedList\": null,\n            \"bookings\": null\n        },\n        \"hotel\": {\n            \"hotelId\": 4,\n            \"hotelName\": \"Floara Chiado Apartments\",\n            \"hotelAddress\": \"Portugal\",\n            \"hotelCity\": \"Lisboa\",\n            \"hotelRooms\": 50,\n            \"hotelPrice\": 39737,\n            \"images\": null,\n            \"savedList\": null,\n            \"bookings\": null\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete From Saved List",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/saved-list/delete/30"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BOOKING",
+			"item": [
+				{
+					"name": "Reserve Rooms",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var now = new Date();\r",
+									"var timestamp = now.toISOString(); \r",
+									"pm.environment.set(\"timestamp\", timestamp);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": {\r\n        \"customerId\": 1\r\n    },\r\n    \"hotel\": {\r\n        \"hotelId\": 1\r\n    },\r\n    \"checkIn\": \"2024-01-05\",\r\n    \"checkOut\": \"2024-01-07\",\r\n\t\"noOfRooms\": 1,\r\n\t\"roomType\": \"double\",\r\n\t\"totalPrice\": 4000,\r\n\t\"bookingStatus\": \"upcoming\", \r\n\t\"bookedAtDate\": {{$timestamp}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/bookings/reserve"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking by Customer Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/bookings/get/1"
+					},
+					"response": [
+						{
+							"name": "Customer Bookings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/bookings/get/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:27:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"bookingsId\": 14,\n        \"customer\": {\n            \"customerId\": 1,\n            \"firstName\": \"Ariah\",\n            \"lastName\": \"William\",\n            \"customerPhoto\": \"https://www.random-name-generator.com/images/faces/female-white/30.jpg?ezimgfmt=rs:149x143/rscb1/ng:webp/ngcb1\",\n            \"role\": \"user\",\n            \"customerEmail\": \"ariah@hotmail.com\",\n            \"customerPhone\": \"9740258381\",\n            \"customerDob\": \"1994-05-11\",\n            \"customerPassword\": \"$2a$10$h58YAJcVkdlrUCbBoYHhEe8Wj6tUIFjvAwMLIrt0v5M4wSEMvjMjC\",\n            \"savedList\": null,\n            \"bookings\": null\n        },\n        \"hotel\": {\n            \"hotelId\": 2,\n            \"hotelName\": \"3 Epoques Apartments\",\n            \"hotelAddress\": \"Prague 1, Czech Republic\",\n            \"hotelCity\": \"Praha\",\n            \"hotelRooms\": 40,\n            \"hotelPrice\": 9710,\n            \"images\": null,\n            \"savedList\": null,\n            \"bookings\": null\n        },\n        \"checkIn\": \"2024-01-19\",\n        \"checkOut\": \"2024-01-22\",\n        \"noOfRooms\": 1,\n        \"roomType\": \"double\",\n        \"totalPrice\": 29130,\n        \"bookingStatus\": \"cancelled\",\n        \"bookedAtDate\": \"2024-01-09\"\n    },\n    {\n        \"bookingsId\": 15,\n        \"customer\": {\n            \"customerId\": 1,\n            \"firstName\": \"Ariah\",\n            \"lastName\": \"William\",\n            \"customerPhoto\": \"https://www.random-name-generator.com/images/faces/female-white/30.jpg?ezimgfmt=rs:149x143/rscb1/ng:webp/ngcb1\",\n            \"role\": \"user\",\n            \"customerEmail\": \"ariah@hotmail.com\",\n            \"customerPhone\": \"9740258381\",\n            \"customerDob\": \"1994-05-11\",\n            \"customerPassword\": \"$2a$10$h58YAJcVkdlrUCbBoYHhEe8Wj6tUIFjvAwMLIrt0v5M4wSEMvjMjC\",\n            \"savedList\": null,\n            \"bookings\": null\n        },\n        \"hotel\": {\n            \"hotelId\": 2,\n            \"hotelName\": \"3 Epoques Apartments\",\n            \"hotelAddress\": \"Prague 1, Czech Republic\",\n            \"hotelCity\": \"Praha\",\n            \"hotelRooms\": 40,\n            \"hotelPrice\": 9710,\n            \"images\": null,\n            \"savedList\": null,\n            \"bookings\": null\n        },\n        \"checkIn\": \"2024-01-15\",\n        \"checkOut\": \"2024-01-16\",\n        \"noOfRooms\": 5,\n        \"roomType\": \"double\",\n        \"totalPrice\": 48550,\n        \"bookingStatus\": \"cancelled\",\n        \"bookedAtDate\": \"2024-01-09\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update Booking based on Hotel Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8080/bookings/update/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Room Availability after booking",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bookings/check-rooms?id=2&rooms=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"check-rooms"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								},
+								{
+									"key": "rooms",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Room Availability after cancelling",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bookings/check-rooms-add?id=2&rooms=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"check-rooms-add"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								},
+								{
+									"key": "rooms",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Booking by Booking Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/bookings/delete/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ADMIN",
+			"item": [
+				{
+					"name": "Save Hotels",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hotelName\": \"Sheraton\",\r\n    \"hotelAddress\": \"District Centre, Saket\",\r\n    \"hotelCity\": \"New Delhi\",\r\n    \"hotelRooms\": 50,\r\n    \"hotelPrice\": 11772,\r\n    \"images\": [\r\n        {\r\n            \"hotelImage\": \"https://bing.com/th?id=OLC.MzlGmSGYYUnU8Q480x360&w=533&h=800&p=0\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/admin/save-hotel"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"hotelName\": \"Sheraton\",\r\n    \"hotelAddress\": \"District Centre, Saket\",\r\n    \"hotelCity\": \"New Delhi\",\r\n    \"hotelRooms\": 50,\r\n    \"hotelPrice\": 11772,\r\n    \"images\": [\r\n        {\r\n            \"hotelImage\": \"https://bing.com/th?id=OLC.MzlGmSGYYUnU8Q480x360&w=533&h=800&p=0\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/admin/save-hotel"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:03:06 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"hotelId\": 22,\n    \"hotelName\": \"Sheraton\",\n    \"hotelAddress\": \"District Centre, Saket\",\n    \"hotelCity\": \"New Delhi\",\n    \"hotelRooms\": 50,\n    \"hotelPrice\": 11772,\n    \"images\": [\n        {\n            \"hotelImageId\": 28,\n            \"hotelDto\": null,\n            \"hotelImage\": \"https://bing.com/th?id=OLC.MzlGmSGYYUnU8Q480x360&w=533&h=800&p=0\"\n        }\n    ],\n    \"savedList\": null,\n    \"bookings\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Modify Hotels",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hotelId\": 1020,\r\n    \"hotelName\": \"Sheraton Grand\",\r\n    \"hotelAddress\": \"District Centre, Saket\",\r\n    \"hotelCity\": \"New Delhi\",\r\n    \"hotelRooms\": 50,\r\n    \"hotelPrice\": 11772,\r\n    \"images\": [\r\n        {\r\n            \"hotelImageId\":1035,\r\n            \"hotelImage\": \"https://bing.com/th?id=OLC.MzlGmSGYYUnU8Q480x360&w=533&h=800&p=0\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/admin/modify-hotel"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"hotelName\": \"Sheraton\",\r\n    \"hotelAddress\": \"District Centre, Saket\",\r\n    \"hotelCity\": \"New Delhi\",\r\n    \"hotelRooms\": 50,\r\n    \"hotelPrice\": 11772,\r\n    \"images\": [\r\n        {\r\n            \"hotelImage\": \"https://bing.com/th?id=OLC.MzlGmSGYYUnU8Q480x360&w=533&h=800&p=0\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/admin/save-hotel"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:03:06 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"hotelId\": 22,\n    \"hotelName\": \"Sheraton\",\n    \"hotelAddress\": \"District Centre, Saket\",\n    \"hotelCity\": \"New Delhi\",\n    \"hotelRooms\": 50,\n    \"hotelPrice\": 11772,\n    \"images\": [\n        {\n            \"hotelImageId\": 28,\n            \"hotelDto\": null,\n            \"hotelImage\": \"https://bing.com/th?id=OLC.MzlGmSGYYUnU8Q480x360&w=533&h=800&p=0\"\n        }\n    ],\n    \"savedList\": null,\n    \"bookings\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Hotel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/admin/delete-hotel/51"
+					},
+					"response": [
+						{
+							"name": "Deleted Hotel",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/admin/delete-hotel/51"
+							},
+							"status": "Gone",
+							"code": 410,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 16 Jan 2024 11:55:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Add Hotel Image",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CUSTOMER",
+			"item": [
+				{
+					"name": "Register Customer",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Robert\",\r\n    \"lastName\": \"Harris\",\r\n    \"customerEmail\": \"ariah@hotmail.com\",\r\n    \"customerPhone\": \"9878767651\",\r\n    \"customerDob\": \"1991-09-13\",\r\n    \"customerPassword\": \"RobertHarris\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/register"
+					},
+					"response": [
+						{
+							"name": "Customer Email Already Present",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Robert\",\r\n    \"lastName\": \"Harris\",\r\n    \"customerEmail\": \"ariah@hotmail.com\",\r\n    \"customerPhone\": \"9878767651\",\r\n    \"customerDob\": \"1991-09-13\",\r\n    \"customerPassword\": \"RobertHarris\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/register"
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:25:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "Customer email already registered!"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/login?email=ariah@hotmail.com&password=Ariah1Willia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "ariah@hotmail.com"
+								},
+								{
+									"key": "password",
+									"value": "Ariah1Willia"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login (Incorrect)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/login?email=ariah@hotmail.com&password=Ariah1William",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "ariah@hotmail.com"
+										},
+										{
+											"key": "password",
+											"value": "Ariah1William"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "18"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:17:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "Incorrect Password"
+						},
+						{
+							"name": "Login (Correct)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/login?email=ariah@hotmail.com&password=Ariah1William",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "ariah@hotmail.com"
+										},
+										{
+											"key": "password",
+											"value": "Ariah1William"
+										}
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:18:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"customerId\": 1,\n    \"firstName\": \"Ariah\",\n    \"lastName\": \"William\",\n    \"customerPhoto\": \"https://www.random-name-generator.com/images/faces/female-white/30.jpg?ezimgfmt=rs:149x143/rscb1/ng:webp/ngcb1\",\n    \"role\": \"user\",\n    \"customerEmail\": \"ariah@hotmail.com\",\n    \"customerPhone\": \"9740258381\",\n    \"customerDob\": \"1994-05-11\",\n    \"customerPassword\": \"$2a$10$h58YAJcVkdlrUCbBoYHhEe8Wj6tUIFjvAwMLIrt0v5M4wSEMvjMjC\",\n    \"savedList\": null,\n    \"bookings\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": 4,\r\n    \"firstName\": \"Robert\",\r\n    \"lastName\": \"Harris\",\r\n    \"customerEmail\": \"ariah@hotmail.com\",\r\n    \"customerPhone\": \"9878767651\",\r\n    \"customerDob\": \"1991-09-13\",\r\n    \"customerPassword\": \"RobertHarris\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/updateProfile"
+					},
+					"response": []
+				},
+				{
+					"name": "Register #2",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Login #2",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HOTELS",
+			"item": [
+				{
+					"name": "Get Hotel Images by Hotel Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/getImage/1"
+					},
+					"response": [
+						{
+							"name": "Hotel Images",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/getImage/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:20:04 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"hotelImageId\": 1,\n        \"hotelDto\": null,\n        \"hotelImage\": \"https://media.gettyimages.com/id/1146021471/photo/modern-bedroom-interior-with-sea-view.jpg?s=612x612&w=0&k=20&c=ii8I3tJHGwRmoh-PK8yaSeFgT0vJd5_bJXA8NO1n-gA=\"\n    },\n    {\n        \"hotelImageId\": 13,\n        \"hotelDto\": null,\n        \"hotelImage\": \"https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&w=600\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All Hotels",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/getAll"
+					},
+					"response": [
+						{
+							"name": "All Hotels",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/getAll"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:21:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"hotelId\": 1,\n        \"hotelName\": \"Aparthotel Stare Miasto\",\n        \"hotelAddress\": \"Old Town, Poland\",\n        \"hotelCity\": \"Krakow\",\n        \"hotelRooms\": 0,\n        \"hotelPrice\": 8300,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 2,\n        \"hotelName\": \"3 Epoques Apartments\",\n        \"hotelAddress\": \"Prague 1, Czech Republic\",\n        \"hotelCity\": \"Praha\",\n        \"hotelRooms\": 40,\n        \"hotelPrice\": 9710,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 3,\n        \"hotelName\": \"Casa Portuguesa Prata\",\n        \"hotelAddress\": \"Santa Maria Maior\",\n        \"hotelCity\": \"Portugal\",\n        \"hotelRooms\": 80,\n        \"hotelPrice\": 24674,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 4,\n        \"hotelName\": \"Floara Chiado Apartments\",\n        \"hotelAddress\": \"Portugal\",\n        \"hotelCity\": \"Lisboa\",\n        \"hotelRooms\": 50,\n        \"hotelPrice\": 39737,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 5,\n        \"hotelName\": \"Comfort Hotel\",\n        \"hotelAddress\": \"llehammersvej Kastrup, 2770 Copenhagen\",\n        \"hotelCity\": \"Denmark\",\n        \"hotelRooms\": 45,\n        \"hotelPrice\": 12300,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 6,\n        \"hotelName\": \"Líbere Madrid\",\n        \"hotelAddress\": \"osé Abascal, 8, Chamberi\",\n        \"hotelCity\": \"Madrid\",\n        \"hotelRooms\": 28,\n        \"hotelPrice\": 18767,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 7,\n        \"hotelName\": \"Vértice Roomspace\",\n        \"hotelAddress\": \"Laguna Dalga, 4, Villaverde\",\n        \"hotelCity\": \"Madrid\",\n        \"hotelRooms\": 60,\n        \"hotelPrice\": 6500,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 8,\n        \"hotelName\": \"Gran View Apartments\",\n        \"hotelAddress\": \"Calle Gran Vía 48, Centro\",\n        \"hotelCity\": \"Madrid\",\n        \"hotelRooms\": 50,\n        \"hotelPrice\": 34981,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 9,\n        \"hotelName\": \"Sevilla Fórum\",\n        \"hotelAddress\": \"Luis Fuentes Bejarano, 45, Este\",\n        \"hotelCity\": \"Seville\",\n        \"hotelRooms\": 70,\n        \"hotelPrice\": 8300,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 10,\n        \"hotelName\": \"Hotel Cervantes\",\n        \"hotelAddress\": \"Cervantes, 12, Old town\",\n        \"hotelCity\": \"Praha\",\n        \"hotelRooms\": 75,\n        \"hotelPrice\": 9710,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 11,\n        \"hotelName\": \"O Casario\",\n        \"hotelAddress\": \"Estrada Nacional 213 Eixes, Mirandela\",\n        \"hotelCity\": \"Portugal\",\n        \"hotelRooms\": 80,\n        \"hotelPrice\": 24674,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 12,\n        \"hotelName\": \"Casa da Belavista\",\n        \"hotelAddress\": \"38 Rua Central, 5400-000 Vilar de Nantes\",\n        \"hotelCity\": \"Lisboa\",\n        \"hotelRooms\": 50,\n        \"hotelPrice\": 39737,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 22,\n        \"hotelName\": \"Sheraton\",\n        \"hotelAddress\": \"District Centre, Saket\",\n        \"hotelCity\": \"New Delhi\",\n        \"hotelRooms\": 50,\n        \"hotelPrice\": 11772,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get by Hotel City Containing String",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/startWith/mad"
+					},
+					"response": [
+						{
+							"name": "\"mad\" ->Madrid",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/startWith/mad"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Jan 2024 16:22:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"hotelId\": 6,\n        \"hotelName\": \"Líbere Madrid\",\n        \"hotelAddress\": \"osé Abascal, 8, Chamberi\",\n        \"hotelCity\": \"Madrid\",\n        \"hotelRooms\": 28,\n        \"hotelPrice\": 18767,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 7,\n        \"hotelName\": \"Vértice Roomspace\",\n        \"hotelAddress\": \"Laguna Dalga, 4, Villaverde\",\n        \"hotelCity\": \"Madrid\",\n        \"hotelRooms\": 60,\n        \"hotelPrice\": 6500,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    },\n    {\n        \"hotelId\": 8,\n        \"hotelName\": \"Gran View Apartments\",\n        \"hotelAddress\": \"Calle Gran Vía 48, Centro\",\n        \"hotelCity\": \"Madrid\",\n        \"hotelRooms\": 50,\n        \"hotelPrice\": 34981,\n        \"images\": null,\n        \"savedList\": null,\n        \"bookings\": null\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EMAIL SERVICE",
+			"item": [
+				{
+					"name": "Send Mail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recipient\": \"thrishalanp@gmail.com\",\r\n    \"msgBody\": \"Hi All, This is a test mail body. Thank You\",\r\n    \"subject\": \"Test Mail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/sendMail"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PAYMENT",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
